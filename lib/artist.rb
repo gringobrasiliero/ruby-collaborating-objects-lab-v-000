@@ -27,4 +27,14 @@ def self.find_or_create_by_name(artist_name)
   self.find(artist_name) || self.create(artist_name)
   end
 
+  def self.find(artist_name)
+   self.all.detect{|artist|artist.name == artist_name}
+   end
+
+def self.create(name)
+  artist = Artist.new(name)
+  artist.save
+  artist
+  end
+
 end
