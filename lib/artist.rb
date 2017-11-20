@@ -23,9 +23,8 @@ def self.all
   @@all
   end
 
-def find_or_create_by_name
-
-end
-
+def self.find_or_create_by_name(artist_name)
+  self.find(artist_name) || self.create(artist_name)
+  end
 
 end
