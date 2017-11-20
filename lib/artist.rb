@@ -15,6 +15,9 @@ def songs
   @songs
 end
 
+def save
+  @@all << self
+end
 
 
 
